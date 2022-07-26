@@ -1,0 +1,239 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{##}
+{#<form id="form1" name="form1" method="post" action="">#}
+{#<table width="200" border="1">#}
+{#  <tr>#}
+{#    <td><a href="/view_hospital_rqst">VIEW HOSPITAL REQUEST</a></td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td><a href="/view_approvehospital">VIEW APPROVED HOSPITAL</a></td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td><a href="/view_reject_hospital">VIEW REJECT HOSPITAL</a></td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td><a href="/view_doctor">VIEW DOCTORS HOSPITALWISE</a></td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td><a href="/view_complaint">VIEW COMPLAINTS AND SEND REPLY</a></td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td><a href="/view_feedback">VIEW FEEDBACK</a></td>#}
+{#  </tr>#}
+{#</table>#}
+{##}
+{#</form>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Get Me Help</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/static/admin/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/static/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/static/admin/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/static/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="/static/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="/static/admin/js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/static/admin/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="/static/admin/images/logos.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+{#        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="/static/admin/images/logo.svg" class="mr-2" alt="logo"/></a>#}
+        <h3>Worker Home</h3>
+          <a class="navbar-brand brand-logo-mini" href="/workerhome"><img src="/static/admin/images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/workerhome">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/workereditprofile">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">EDIT PROFILE</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/workerviewwork">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">WORK REQUEST</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/workerservice">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">SERVICE REPORT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/workerupdatestatus">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">STATUS UPDATE</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chat">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">CHAT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/workerviewreview">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">VIEW REVIEW</span>
+            </a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/workerviewnotification">
+                <span class="icon-align-left"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">VIEW NOTIFICATION</span>
+              </a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/workeracceptedwork">
+                <span class="icon-book"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">VIEW COMPLETED WORK</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/workerchangingpassword">
+                <span class="icons-list"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">CHANGE  PASSWORD</span>
+              </a>
+          </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/logout">
+                <span class="icon-lock"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">Logout</span>
+              </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+
+          <div class="row">
+            <div class="col-md-15 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body" >
+                        {%  block body %}
+<img src="/static/admin/images/b1.jpg" width="580" height="400">
+
+                        {% endblock %}
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+{#        <footer class="footer">#}
+{#          <div class="d-sm-flex justify-content-center justify-content-sm-between">#}
+{#            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>#}
+{#            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>#}
+{#          </div>#}
+{#          <div class="d-sm-flex justify-content-center justify-content-sm-between">#}
+{#            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Distributed by <a href="https://www.themewagon.com/" target="_blank">Themewagon</a></span>#}
+{#          </div>#}
+{#        </footer>#}
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="/static/admin/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="/static/admin/vendors/chart.js/Chart.min.js"></script>
+  <script src="/static/admin/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="/static/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="/static/admin/js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/static/admin/js/off-canvas.js"></script>
+  <script src="/static/admin/js/hoverable-collapse.js"></script>
+  <script src="/static/admin/js/template.js"></script>
+  <script src="/static/admin/js/settings.js"></script>
+  <script src="/static/admin/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="/static/admin/js/dashboard.js"></script>
+  <script src="/static/admin/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

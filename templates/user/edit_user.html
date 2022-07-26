@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="/userupdate/{{ data['user_id'] }}" method="post" enctype="multipart/form-data">
+<table width="200" border="1">
+  <tr>
+    <th scope="row">NAME</th>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ data['u_name'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">HOUSENAME</th>
+    <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5">{{ data['hname'] }}</textarea></td>
+  </tr>
+   <tr>
+    <th scope="row">PLACE</th>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" value="{{ data['place'] }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">POST</th>
+    <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6"value="{{ data['post'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PIN</th>
+    <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7"value="{{ data['pin'] }}" /></td>
+  </tr>
+
+  <tr>
+    <th scope="row">EMAIL</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2"value="{{ data['email'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">AGE</th>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3"value="{{ data['age'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">GENDER</th>
+    <td><p>
+      <label>
+        <input type="radio" name="RadioGroup1" value="MALE" id="RadioGroup1_0"{% if data['gender']=='MALE' %}checked{% endif %} />
+        MALE</label>
+      <br />
+      <label>
+        <input type="radio" name="RadioGroup1" value="FEMALE" id="RadioGroup1_1"{% if data['gender']=='FEMALE' %}checked{% endif %} />
+        FEMALE</label>
+      <br />
+    </p></td>
+  </tr>
+  <tr>
+    <th scope="row">PHOTO</th>
+    <td><label for="fileField"></label>
+         <img src="{{  data['photo'] }}" width="100">
+      <input type="file" name="fileField" id="fileField" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PHONE NUMBER</th>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" value="{{ data['phone_number'] }}"/></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="update" id="button" value="update" /></th>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'ADMIN/admin_home.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="post" class="table-active">
+<table width="400" border="1">
+  <tr style="background-color: #0b2e13;color:white">
+    <th scope="row">SL NO.</th>
+    <td>NAME</td>
+    <td>ADDRESS</td>
+    <td>EMAIL</td>
+    <td>AGE</td>
+    <td>GENDER</td>
+    <td>PHOTO</td>
+    <td>PHONE NUMBER</td>
+
+   
+  </tr>
+     {% for i in data %}
+  <tr>
+    <th scope="row">{{ loop.index }}</th>
+    <td>{{ i['u_name'] }} </td>
+    <td> {{ i['hname'] }},
+     {{ i['place'] }},
+    {{ i['post'] }},
+     {{ i['pin'] }},
+    </td>
+    <td>&nbsp;{{ i['email'] }}</td>
+    <td>&nbsp;{{ i['age'] }}</td>
+    <td>&nbsp;{{ i['gender'] }}</td>
+    <td><img src=" {{ i['photo'] }}" width="100" height="100"> </td>
+    <td>&nbsp;{{ i['phone_number'] }}</td>
+
+  </tr>
+      {% endfor %}
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

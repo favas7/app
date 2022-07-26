@@ -1,0 +1,58 @@
+{% extends 'ADMIN/admin_home.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form action="" method="get" class="table-active" >
+<table   border="2" cellspacing="4" cellpadding="4">
+  <tr style="background-color: #0b2e13;color:white">
+    <th >SL.NO.</th>
+    <td>NAME</td>
+    <td>ADDRESS</td>
+    <td>EMAIL</td>
+    <td>AGE </td>
+
+    <td>CONTACT</td>
+    <td>DETAILS</td>
+
+    <td>GENDER</td>
+
+    <td>&nbsp;</td>
+  </tr>
+     {% for i in data %}
+  <tr>
+
+    <th >{{ loop.index }}</th>
+        <td>{{ i['name'] }}
+        <img src="{{ i['photo'] }}" width="50" height="50"> </td>
+    <td> {{ i['home'] }}
+       {{ i['place'] }}
+        {{ i['post'] }}
+        {{ i['pin'] }}
+    </td>
+    <td>{{ i['email'] }}</td>
+    <td> {{ i['age'] }}</td>
+
+    <td> PH:{{ i['phone_number'] }}<br>EMAIL{{ i.email }}</td>
+    <td> {{ i['category'] }}
+    EXP: {{ i['experience'] }}</td>
+
+    <td> {{ i['gender'] }}</td>
+
+
+    <td><p><a href="/approvingworker/{{ i['user_id'] }}">APPROVE</a></p>
+      <p><a href="/admindeleteworker/{{ i['user_id'] }}">REJECT</a></p></td>
+  </tr>
+      {% endfor %}
+  </table>
+
+</form>
+</body>
+</html>
+{% endblock %}
